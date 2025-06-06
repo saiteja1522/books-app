@@ -47,7 +47,7 @@ if mode == "Book Title":
         st.markdown(f"### 📘 Details for **{title}**")
         cols = st.columns([1, 4])
         with cols[0]:
-            st.image(row["Image-URL-M"], width=100)
+            st.image(row["Image-URL-M"], width=200)
         with cols[1]:
             st.markdown(f"**Author:** {row['Book-Author']}")
             st.markdown(f"**Year:** {row['Year-Of-Publication']}")
@@ -74,7 +74,7 @@ elif mode == "Author":
         info = books_by_author[books_by_author["Book-Title"] == title].iloc[0]
         cols = st.columns([1, 4])
         with cols[0]:
-            st.image(info["Image-URL-M"], width=100)
+            st.image(info["Image-URL-M"], width=200)
         with cols[1]:
             st.markdown(f"**Title:** {title}")
             st.markdown(f"**Publisher:** {info['Publisher']}")
@@ -93,7 +93,7 @@ elif mode == "Publisher":
         info = books_by_pub[books_by_pub["Book-Title"] == title].iloc[0]
         cols = st.columns([1, 4])
         with cols[0]:
-            st.image(info["Image-URL-M"], width=100)
+            st.image(info["Image-URL-M"], width=200)
         with cols[1]:
             st.markdown(f"**Title:** {title}")
             st.markdown(f"**Author:** {info['Book-Author']}")
